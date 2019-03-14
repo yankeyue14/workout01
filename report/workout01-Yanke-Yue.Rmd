@@ -1,0 +1,16 @@
+---
+title: "workout01-Yanke-Yue"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+shots_data <- read.csv('/Users/Yanke/Desktop/stat133/workouts/workout01/data/shots-data.csv', stringsAsFactors = FALSE)
+
+shots_data[shots_data$shot_type=='2PT Field Goal', ]
+two_effective_shots <- data.frame('name'=shots_data$name, 'total' = shots_data$shot_made_flag, 'made'=shots_data$shot_made_flag, 'perc_made'=shots_data$shot_made_flag)
+```
+
